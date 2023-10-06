@@ -3,6 +3,7 @@
 }
 
 @using HairSalon.Models;
+@model List<HairSalon.Models.Client>;
 
 <h1>Clients</h1>
 
@@ -10,12 +11,14 @@
 {
   <h3>No clients have been added yet.</h3>
 } 
-
-<ul>
-@foreach (Client entry in Model)
+else 
 {
-  <li>@Html.ActionLink($"{entry.Name}", "Details", new {id = entry.ClientId})</li>
+  <ul>
+  @foreach (Client entry in Model)
+  {
+    <li>@Html.ActionLink($"{entry.Name}", "Details", new {id = entry.ClientId}) | @entry.Stylist.Name</li>
+  }
+  </ul>
 }
-</ul>
 
 <p>@Html.ActionLink("Add new client", "Create")</p>
