@@ -11,9 +11,11 @@
   <h3>No clients have been added yet.</h3>
 } 
 
+<ul>
 @foreach (Client entry in Model)
 {
-  <li>@entry.Name</li>
+  <li>@Html.ActionLink($"{entry.Name}", "Details", new {id = entry.ClientId})</li>
 }
+</ul>
 
 <p>@Html.ActionLink("Add new client", "Create")</p>
