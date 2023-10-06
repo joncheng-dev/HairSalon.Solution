@@ -39,7 +39,7 @@ _3. Clone the repository from the GitHub link by entering in this command:_
 > $ git clone https://github.com/joncheng-dev/HairSalon.Solution.git
 > ```
 
-_4. Navigate to the project's production directory `HairSalon.Solution`, and create a new file called `appsettings.json`._
+_4. Navigate to the project's root directory `HairSalon.Solution`, and create a new file called `appsettings.json`._
 
 _5. Within `appsettings.json`, put in the following code, replacing the `uid`, and `pwd` values with your username and password for MySQL._ 
 ```json
