@@ -5,10 +5,17 @@
 @model HairSalon.Models.Client
 
 <h3>Add a new client</h3>
+<p><strong>NOTE:</strong> All clients must be associated with a stylist. If there are no stylists, you cannot add a client.</p>
+<p>Click link to add a stylist:</p>
+@Html.ActionLink("Add stylist", "Create", "Stylists")
+
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
-  <input type="submit" value="Add new client" />
+
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+  <input type="submit" value="Add new client"/>
 }
 <p>@Html.ActionLink("Show all clients", "Index")</p>
