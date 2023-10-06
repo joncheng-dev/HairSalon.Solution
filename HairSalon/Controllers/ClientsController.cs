@@ -38,5 +38,19 @@ namespace HairSalon.Controllers
       Client clientToShowDetailsOn = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       return View(clientToShowDetailsOn);
     }
+
+    public ActionResult Edit(int id)
+    {
+      Client targetClientToEdit = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      return View(targetClientToEdit);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Client targetClient)
+    {
+      _db.Clients.Update(targetClient);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
