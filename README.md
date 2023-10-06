@@ -8,6 +8,8 @@
 
 - _C#_
 - _HTML_
+- _CSS_
+- _Bootstrap_
 - _.NET 6_
 - _ASP.NET Core MVC_
 - _Razor View Engine_
@@ -19,18 +21,19 @@
 
 - _Upon landing on the splash page, the user is welcomed with a message "Welcome to Eau Claire's Salon!"._
 - _To start, opt to view a list of stylists or a list of clients._
-- _ _
-- _This will display any and all existing orders associated with the vendor clicked previously. The user may choose to add more orders._
-- _Clicking on any orders on this list of orders allows the user to see details of the order._
-- _Data remains saved in the Models business logic files until the browser is closed or the terminal is no longer running the app._
-- _This web application was written using C#, run using .NET framework, its ability to run in a browser enabled using the ASP.NET Core MVC framework, ._
-- _Key objectives include: C# basics, the Model-View-Controller (MVC) coding pattern, ._
+- _The user may add stylists and clients. However, note that clients may only be added after a stylist has been added as clients must be associated with an existing stylist._
+- _Clicking on stylists and clients allow you to view their details, edit their attributes, or delete them._
+- _Stylist and client information is saved in a database and remains after exiting the app._
+- _This web application was written using C#, run using .NET framework, its ability to run in a browser enabled using the ASP.NET Core MVC framework, and database query and relationships handled using Entity Framework Core._
+- _Styling uses CSS and Bootstrap._
+- _Data is managed using MySQL. MySQL Workbench is used to create, access, and modify the database schema and tables._
+- _Key objectives for this project include: using Entity Framework Core for database communication, practicing database naming conventions, implementing a one-to-many database relationship, as well as create and read functionality for classes._
 
 ## Setup/Installation Requirements
 
 ### Required Technology
 
-_1. Check that you have the required technology installed for MySql (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) and MySql Workbench (https://dev.mysql.com/doc/workbench/en/)._
+- _Verify that you have the required technology installed for MySQL (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) and MySQL Workbench (https://dev.mysql.com/doc/workbench/en/)._
 
 ### Setting Up the Project
 
@@ -44,7 +47,7 @@ _3. Clone the repository from the GitHub link by entering in this command:_
 > $ git clone https://github.com/joncheng-dev/HairSalon.Solution.git
 > ```
 
-_4. Navigate to the project's root directory `HairSalon.Solution`, and create a new file called `appsettings.json`._
+_4. Navigate to the project's production directory `HairSalon`, and create a new file called `appsettings.json`._
 
 _5. Within `appsettings.json`, put in the following code, replacing the `uid`, and `pwd` values with your username and password for MySQL._ 
 ```json
@@ -57,7 +60,7 @@ _5. Within `appsettings.json`, put in the following code, replacing the `uid`, a
 
 ### Importing / Setting up the Database
 
-_1. In MySql Workbench's Navigator > Administration window, select Data Import/Restore._
+_1. In MySQL Workbench's Navigator > Administration window, select Data Import/Restore._
 
 _2. In Import Options, select Import from Self_Contained File._ 
 
@@ -65,7 +68,7 @@ _3. Navigate to the file `jonathan_cheng.sql` found in the project's root direct
 
 _4. Under Default Schema to be Imported To, select the New button._
 
-_5. Enter the name of the database as `hair_salon` or another name of your choosing. If you do choose to use a different name for your database, replace `hair_salon` in the `appsettings.json` file `ConnectionStrings` object `DefaultConnection` substring `database=hair_salon` as `database=[YOUR-DB-NAME-HERE]` accordingly. Click Ok._
+_5. Enter the name of the database as `hair_salon` or another name of your choosing. If you opt to use a different name for your database, replace `hair_salon` in the `appsettings.json` file `ConnectionStrings` object `DefaultConnection` substring `database=hair_salon` as `database=[YOUR-DB-NAME-HERE]` accordingly. Click Ok._
 
 _6. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window._
 
