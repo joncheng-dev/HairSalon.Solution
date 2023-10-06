@@ -1,6 +1,6 @@
 # Eau Claire's Salon
 
-#### A C# web application.
+#### A C# web application made for Claire, the owner of a hair salon. Claire's MVC web application can keep track of her stylists and their respective clients. 
 
 #### By Jonathan Cheng
 
@@ -15,11 +15,16 @@
 - _MySQL Community Server_
 - _Entity Framework Core_
 
-<p align="center"><img src="./wwwroot/img/database-schema.png" alt="schema of database relationship"></p>
-
 ## Description
 
-- _._
+- _Upon landing on the splash page, the user is welcomed with a message "Welcome to Eau Claire's Salon!"._
+- _To start, opt to view a list of stylists or a list of clients._
+- _ _
+- _This will display any and all existing orders associated with the vendor clicked previously. The user may choose to add more orders._
+- _Clicking on any orders on this list of orders allows the user to see details of the order._
+- _Data remains saved in the Models business logic files until the browser is closed or the terminal is no longer running the app._
+- _This web application was written using C#, run using .NET framework, its ability to run in a browser enabled using the ASP.NET Core MVC framework, ._
+- _Key objectives include: C# basics, the Model-View-Controller (MVC) coding pattern, ._
 
 ## Setup/Installation Requirements
 
@@ -73,7 +78,7 @@ _6. Navigate to the tab called Import Progress and click Start Import at the bot
 > $ dotnet watch run
 > ```
 
-- _Alternatively, using the command `dotnet run` will execute the application, but you will have to manually open a browser window and navigate to the application url (ex: `https://localhost:5001` or `http://localhost:5000`)_
+- _Alternatively, using the command `dotnet run` will execute the application. Manually open a browser window and navigate to the application url (ex: `https://localhost:5001` or `http://localhost:5000`)_
 
 > ```bash
 > $ dotnet run
@@ -88,7 +93,7 @@ _6. Navigate to the tab called Import Progress and click Start Import at the bot
 
 ## Known Bugs
 
-- _Please report any additional bugs you find with a message to joncheng.dev@gmail.com_
+- _Kindly report any bugs you find with a descriptive message to joncheng.dev@gmail.com_
 
 ## License
 
