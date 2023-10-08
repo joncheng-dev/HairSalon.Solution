@@ -1,3 +1,29 @@
 body {
-  background-color: beige;
+  background-color: #451952;
+  color: #dce0e7;
+}
+
+.jumbotron {
+  /* background-color: #6d9a79; */
+  background-color: #662549;
+}
+
+#side-bar {
+  background-color: #F39F5A;
+}
+
+.container-fluid {
+  background-color: #365577;
+}
+
+#main-display {
+  background-color: #AE445A;
+}
+
+.fs-5 {
+  line-height: 200%;
+}
+
+.w-100 { 
+  line-height: 200%;
 }

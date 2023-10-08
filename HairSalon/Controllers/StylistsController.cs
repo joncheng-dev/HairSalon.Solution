@@ -17,6 +17,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
+      ViewBag.PageTitle = "Stylists";      
       List<Stylist> listOfStylists = _db.Stylists.ToList();
       return View(listOfStylists);
     }
