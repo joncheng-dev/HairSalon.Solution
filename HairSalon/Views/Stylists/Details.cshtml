@@ -5,26 +5,28 @@
 @model HairSalon.Models.Stylist
 @using HairSalon.Models
 
-<h2>Stylist Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<div class="col py-2 col-xl-2 px-sm-2 px-0" id="main-display">
+  <span class="fs-5 d-none d-sm-inline">Navigation Bar</span>
+  <p>Some message here to users</p>
 
-@if (@Model.Clients.Count == 0)
-{
-  <h3>This stylist has no clients at the moment.</h3>
-}
-else 
-{
-  <h3>Clients:</h3>
-  <ul>
-    @foreach (Client entry in Model.Clients)
-    {
-      <li>@Html.ActionLink($"{entry.Name}", "Details", "Clients", new { id = entry.ClientId})</li>
-    }
-  </ul>
-}
+  <h2>Stylist Details</h2>
+  <hr />
+  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId})</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId})</p>
-<p>@Html.ActionLink("Back to list of Stylists", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+  @if (@Model.Clients.Count == 0)
+  {
+    <h3>This stylist has no clients at the moment.</h3>
+  }
+  else 
+  {
+    <h3>Clients:</h3>
+    <ul>
+      @foreach (Client entry in Model.Clients)
+      {
+        <li>@Html.ActionLink($"{entry.Name}", "Details", "Clients", new { id = entry.ClientId})</li>
+      }
+    </ul>
+  }
+  <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId})</p>
+  <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId})</p>
+</div>

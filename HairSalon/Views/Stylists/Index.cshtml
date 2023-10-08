@@ -4,18 +4,22 @@
 
 @using HairSalon.Models;
 
-@if (@Model.Count == 0)
-{
-  <h3>No stylists have been added</h3>
-} 
+<div class="col py-2 col-xl-2 px-sm-2 px-0" id="main-display">
+  <span class="fs-5 d-none d-sm-inline">Navigation Bar</span>
+  <p>Some message here to users</p>
 
-<ul>
-  @foreach(Stylist entry in Model)
+  @if (@Model.Count == 0)
   {
-    <li>@Html.ActionLink($"{entry.Name}", "Details", new { id = entry.StylistId })</li>
-  }
-</ul>
+    <h3>No stylists have been added</h3>
+  } 
 
-<p>@Html.ActionLink("Add a stylist", "Create")</p>
-<p>@Html.ActionLink("Add a client", "Create", "Clients")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+  <ul>
+    @foreach(Stylist entry in Model)
+    {
+      <li>@Html.ActionLink($"{entry.Name}", "Details", new { id = entry.StylistId })</li>
+    }
+  </ul>
+
+  <p>@Html.ActionLink("Add a stylist", "Create")</p>
+  <p>@Html.ActionLink("Add a client", "Create", "Clients")</p>
+</div>

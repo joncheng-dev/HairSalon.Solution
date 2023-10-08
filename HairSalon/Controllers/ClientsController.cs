@@ -18,6 +18,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
+      ViewBag.PageTitle = "All Clients";
+      ViewBag.UnderTitleText = "Below is a list of all clients in the database.";      
       List<Client> listOfAllClients = _db.Clients
                                          .Include(client => client.Stylist)
                                          .ToList();
@@ -26,6 +28,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.PageTitle = "Add New Client";
+      ViewBag.UnderTitleText = "Below is a list of all stylists in the database.";      
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
       return View();
     }
@@ -44,6 +48,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
+      ViewBag.PageTitle = "Client Details";      
+      ViewBag.UnderTitleText = "Below are details for the selected client.";      
       Client clientToShowDetailsOn = _db.Clients
                                         .Include(client => client.Stylist)
                                         .FirstOrDefault(client => client.ClientId == id);
@@ -52,6 +58,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Edit(int id)
     {
+      ViewBag.PageTitle = "Edit Client";            
+      ViewBag.UnderTitleText = "Make edits for the selected client.";
       Client targetClientToEdit = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
       return View(targetClientToEdit);
@@ -67,6 +75,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Delete(int id)
     {
+      ViewBag.PageTitle = "Delete Client";      
+      ViewBag.UnderTitleText = "Confirm delete action for selected client.";      
       Client targetClientToDelete = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       return View(targetClientToDelete);
     }
