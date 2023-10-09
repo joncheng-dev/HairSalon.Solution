@@ -4,12 +4,12 @@
 
 @model HairSalon.Models.Client
 
-<div class="col py-2 col-xl-2 px-sm-2 px-0" id="main-display">
-  <span class="fs-5 d-none d-sm-inline">Navigation Bar</span>
-  <p>Some message here to users</p>
-  <h2>Are you sure you want to delete this client?</h2>
+<div class="col py-2 col-xl-10 px-sm-2 px-0" id="main-display">
+  <h1>Delete Client</h1>
+  <p>Are you sure you want to delete this client?</p>
+  <hr/>  
 
-  @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+  <h3><strong>@Html.DisplayNameFor(model => model.Name)</strong>: @Html.DisplayFor(model => model.Name)</h3>
   @using (Html.BeginForm())
   {
     <input type="submit" value="Delete"/>

@@ -16,17 +16,13 @@ namespace HairSalon.Controllers
     }
 
     public ActionResult Index()
-    {
-      ViewBag.PageTitle = "Stylists";
-      ViewBag.UnderTitleText = "Below is a list of all stylists in the database.";      
+    { 
       List<Stylist> listOfStylists = _db.Stylists.ToList();
       return View(listOfStylists);
     }
 
     public ActionResult Create()
-    {
-      ViewBag.PageTitle = "Add New Stylist";
-      ViewBag.UnderTitleText = "Fill in the form to add a new stylist.";                  
+    {                 
       return View();
     }
 
@@ -39,9 +35,7 @@ namespace HairSalon.Controllers
     }
 
     public ActionResult Details(int id)
-    {
-      ViewBag.PageTitle = "Stylist Details";
-      ViewBag.UnderTitleText = "Below are details for the selected stylist.";                  
+    {               
       Stylist targetStylist = _db.Stylists
                                  .Include(stylist => stylist.Clients)
                                  .FirstOrDefault(stylist => stylist.StylistId == id);
@@ -49,9 +43,7 @@ namespace HairSalon.Controllers
     }
 
     public ActionResult Edit(int id)
-    {
-      ViewBag.PageTitle = "Edit Stylist";
-      ViewBag.UnderTitleText = "Make edits for the selected stylist.";                  
+    {                 
       Stylist targetStylist = _db.Stylists
                                   .FirstOrDefault(stylist => stylist.StylistId == id);
       return View(targetStylist);
@@ -66,9 +58,7 @@ namespace HairSalon.Controllers
     }
 
     public ActionResult Delete(int id)
-    {
-      ViewBag.PageTitle = "Delete Stylist";   
-      ViewBag.UnderTitleText = "Confirm delete action for selected stylist.";               
+    {               
       Stylist targetStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(targetStylist);
     }

@@ -3,12 +3,11 @@
 }
 
 @model HairSalon.Models.Stylist
-<div class="col py-2 col-xl-2 px-sm-2 px-0" id="main-display">
-  <span class="fs-5 d-none d-sm-inline">Navigation Bar</span>
-  <p>Some message here to users</p>
-  <h2>Edit Stylist</h2>
-
-  <h4>Edit Stylist Details: @Html.DisplayFor(model => model.Name)</h4>
+<div class="col py-2 col-xl-10 px-sm-2 px-0" id="main-display">
+  <h1>Edit Stylist</h1>
+  <p>Edit details for the selected stylist.</p>
+  <hr/>
+  <h4><strong>Stylist</strong>: @Html.DisplayFor(model => model.Name)</h4>
 
   @using (Html.BeginForm())
   {

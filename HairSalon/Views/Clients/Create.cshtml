@@ -4,12 +4,13 @@
 
 @model HairSalon.Models.Client
 
-<div class="col py-2 col-xl-2 px-sm-2 px-0" id="main-display">
-  <span class="fs-5 d-none d-sm-inline">Navigation Bar</span>
+<div class="col py-2 col-xl-10 px-sm-2 px-0" id="main-display">
+  <h1>Add New Client</h1>
+  <p>A list of all stylists in the database.</p>
+  @Html.ActionLink("Add stylist", "Create", "Stylists")
+  <hr/>
   <p>NOTE: All clients must be associated with a stylist. If there are no stylists, you cannot add a client.</p>
   <p>Click link to add a stylist:</p>
-  @Html.ActionLink("Add stylist", "Create", "Stylists")
-
   @using (Html.BeginForm())
   {
     @Html.LabelFor(model => model.Name)

@@ -4,12 +4,11 @@ body {
 }
 
 .jumbotron {
-  /* background-color: #6d9a79; */
   background-color: #662549;
 }
 
 #side-bar {
-  background-color: #F39F5A;
+  background-color: #f39f5a;
 }
 
 .container-fluid {
@@ -17,13 +16,14 @@ body {
 }
 
 #main-display {
-  background-color: #AE445A;
+  background-color: #ae445a;
+  font-size: larger;
 }
 
 .fs-5 {
   line-height: 200%;
 }
 
-.w-100 { 
+.w-100 {
   line-height: 200%;
 }

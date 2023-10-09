@@ -4,13 +4,11 @@
 
 @model HairSalon.Models.Client
 
-<div class="col py-2 col-xl-2 px-sm-2 px-0" id="main-display">
-  <span class="fs-5 d-none d-sm-inline">Navigation Bar</span>
-  <p>Some message here to users</p>
-  <h2>Client Details</h2>
+<div class="col py-2 col-xl-10 px-sm-2 px-0" id="main-display">
+  <h1>Client Details</h1>
+  <p>Details for the selected client.</p>
+  <p>@Html.ActionLink("Edit Client", "Edit", new {id = Model.ClientId}) | @Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId})</p>
   <hr/>
-  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-  <h3>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist.Name)</h3>
-  <p>@Html.ActionLink("Edit Client", "Edit", new {id = Model.ClientId}) </p>
-  <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId})</p>
+  <h3><strong>@Html.DisplayNameFor(model => model.Name)</strong>: @Html.DisplayFor(model => model.Name)</h3>
+  <h3><strong>@Html.DisplayNameFor(model => model.Stylist)</strong>: @Html.DisplayFor(model => model.Stylist.Name)</h3>
 </div>
