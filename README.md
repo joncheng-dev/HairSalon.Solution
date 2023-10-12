@@ -1,6 +1,6 @@
 # Eau Claire's Salon
 
-#### A C# web application made for Claire, the owner of a hair salon. Claire's MVC web application can keep track of her stylists and their respective clients. 
+#### A C# web application made for Claire, the owner of a hair salon. Claire's MVC web application can keep track of her stylists and their respective clients.
 
 #### By Jonathan Cheng
 
@@ -13,7 +13,7 @@
 - _.NET 6_
 - _ASP.NET Core MVC_
 - _Razor View Engine_
-- _MySQL Workbench_ 
+- _MySQL Workbench_
 - _MySQL Community Server_
 - _Entity Framework Core_
 
@@ -49,11 +49,12 @@ _3. Clone the repository from the GitHub link by entering in this command:_
 
 _4. Navigate to the project's production directory `HairSalon`, and create a new file called `appsettings.json`._
 
-_5. Within `appsettings.json`, put in the following code, replacing the `uid`, and `pwd` values with your username and password for MySQL._ 
+_5. Within `appsettings.json`, put in the following code, replacing the `uid`, and `pwd` values with your username and password for MySQL._
+
 ```json
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=hair_salon;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];",
+    "DefaultConnection": "Server=localhost;Port=3306;database=hair_salon;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
 ```
@@ -62,7 +63,7 @@ _5. Within `appsettings.json`, put in the following code, replacing the `uid`, a
 
 _1. In MySQL Workbench's Navigator > Administration window, select Data Import/Restore._
 
-_2. In Import Options, select Import from Self_Contained File._ 
+_2. In Import Options, select Import from Self_Contained File._
 
 _3. Navigate to the file `jonathan_cheng.sql` found in the project's root directory._
 
@@ -71,7 +72,6 @@ _4. Under Default Schema to be Imported To, select the New button._
 _5. Enter the name of the database as `hair_salon` or another name of your choosing. If you opt to use a different name for your database, replace `hair_salon` in the `appsettings.json` file `ConnectionStrings` object `DefaultConnection` substring `database=hair_salon` as `database=[YOUR-DB-NAME-HERE]` accordingly. Click Ok._
 
 _6. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window._
-
 
 ## Running the Project
 
@@ -93,10 +93,9 @@ _6. Navigate to the tab called Import Progress and click Start Import at the bot
 > $ dotnet build
 > ```
 
-
 ## Known Bugs
 
-- _Kindly report any bugs you find with a descriptive message to joncheng.dev@gmail.com_
+- _Please report any bugs you find with a descriptive message to joncheng.dev@gmail.com_
 
 ## License
 
