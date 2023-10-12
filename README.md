@@ -95,7 +95,7 @@ _6. Navigate to the tab called Import Progress and click Start Import at the bot
 
 ## Known Bugs
 
-- _Please report any bugs you find with a descriptive message to joncheng.dev@gmail.com_
+- _Kindly report any bugs you find with a descriptive message to joncheng.dev@gmail.com_
 
 ## License
 
